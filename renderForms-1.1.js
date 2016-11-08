@@ -123,12 +123,13 @@ RenderForm.prototype = {
 					.append(thisField);					
 			} else if (this.type=='button'){
                 thisField = $("<input/>")
+          .addClass("btn btn-default")
 					.attr('name', this.name)
 					.attr('id', this.name)
 					.attr('type', this.type)
 					.attr('value', this.label)
 					.attr('data-condition', this.condition)
-                    .attr('data-action', this.action)
+          .attr('data-action', this.action)
 					.attr('data-fieldset', this.fieldset);
 				$("<div/>")
 					.appendTo($(theDiv))
@@ -138,7 +139,6 @@ RenderForm.prototype = {
 					.append(thisField);			
             }
 		});
-		$('<div class="input-group"/>').append('<input class="btn btn-default" type="submit" name="ok" value="Doorgaan"/>').appendTo($(theDiv));
 		return theDiv;	
 	}
 	
