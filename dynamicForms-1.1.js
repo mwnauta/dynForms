@@ -166,7 +166,7 @@ DynamicForm.prototype = {
                         self.setFieldValue(thisField, value);
                     }
                 })
-            }).error(function(jqXHR, textStatus, errorThrown){
+            }).fail(function(jqXHR, textStatus, errorThrown){
                 console.log("ERROR: " + jqXHR + textStatus + errorThrown);
             });
             }
